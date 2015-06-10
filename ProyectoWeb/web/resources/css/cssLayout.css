@@ -1,7 +1,15 @@
 
 #top {
     position: relative;
-    background-color: #036fab;
+    background-color: #8BC34A;
+    color: white;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+}
+
+#menu{
+    position: relative;
+    background-color: #689F38;
     color: white;
     padding: 5px;
     margin: 0px 0px 10px 0px;
