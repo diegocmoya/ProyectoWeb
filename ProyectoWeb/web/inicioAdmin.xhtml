@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <ui:composition template="plantillaPrincipal.xhtml">
+            <ui:define name="top">
+                <div id="logoPrincipal">
+
+                </div>
+                <div>
+                    <h:form>  
+                        <p:growl id="messages"/>
+
+                        <p:menubar>
+                            <p:submenu label="Inicio" icon="ui-icon-document">
+                                <p:menuitem value="Inicio de pagina" url="inicioAdmin.xhtml" />
+                            </p:submenu>
+
+                            <p:submenu label="Soporte" icon="ui-icon-document">
+                                <p:menuitem value="Agregar Planes" url="pagAgregar.xhtml" />
+                                <p:menuitem value="Modificar Planes" url="pagModificar.xhtml" />
+                                <p:menuitem value="Eliminar Planes" url="pagEliminar.xhtml" />
+                            </p:submenu>
+                            <f:facet name="options">
+                                <p:commandButton ajax="false" value="Logout" action="#{administradorUsuario.logOut(e)}"/>
+                            </f:facet>
+                        </p:menubar>
+                    </h:form>
+                </div>
+            </ui:define>
+            <ui:define name="content">
+                <h3>Bienvenido Al Soporte De La Pagina</h3>
+                <p:imageSwitch effect="turnDown">
+                    <ui:repeat value="#{imagesView.images}" var="image">
+                        <p:graphicImage value="resources/img/#{image}" />
+                    </ui:repeat>
+                </p:imageSwitch>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

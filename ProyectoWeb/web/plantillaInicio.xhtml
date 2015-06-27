@@ -6,42 +6,68 @@
 
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <h:outputStylesheet name="./css/default.css"/>
-        <h:outputStylesheet name="./css/cssLayout.css"/>
-        <title>Inicio</title>
-    </h:head>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                    <link rel="stylesheet" href="styles.css"/>
+                        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+                        <script src="script.js"></script>
+                        <h:outputStylesheet name="./css/default.css"/>
+                        <h:outputStylesheet name="./css/cssLayout.css"/>
+                        
+                        <title>Inicio</title>
+                        </h:head>
 
-    <h:body>
+                        <h:body>
 
-        <div id="top">
-            <ui:insert name="top">
-                <div>
-                    Refugio de vida Silvestre Curu
-                </div>
-            </ui:insert>
-        </div>
-        <div id="menu">
-            <ui:insert name="menu">
-                
-            </ui:insert>
-        </div>
-        <div>
-            <div id="left">
-                <ui:insert name="left">Left</ui:insert>
-            </div>
-            <div>
-                <div id="right">
-                    <ui:insert name="right">Right</ui:insert>
-                </div>
-                <div id="content" class="right_content">
-                    <ui:insert name="content">Content</ui:insert>
-                </div>
-            </div>
-        </div>
-        <div id="bottom">
-            <ui:insert name="bottom">Bottom</ui:insert>
-        </div>
+                            <div id="top">
+                                <ui:insert name="top">
+                                    <div>
+                                        Refugio de vida Silvestre Curu
+                                    </div>
+                                </ui:insert>
+                            </div>
+                            <div id="menu">
+                                <ui:insert name="cssMenu">
+                                    <ul>
+                                        <li><a href='#'><span>Home</span></a></li>
+                                        <li class='active has-sub'><a href='#'><span>Products</span></a>
+                                            <ul>
+                                                <li class='has-sub'><a href='#'><span>Product 1</span></a>
+                                                    <ul>
+                                                        <li><a href='#'><span>Sub Product</span></a></li>
+                                                        <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class='has-sub'><a href='#'><span>Product 2</span></a>
+                                                    <ul>
+                                                        <li><a href='#'><span>Sub Product</span></a></li>
+                                                        <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href='#'><span>About</span></a></li>
+                                        <li class='last'><a href='#'><span>Contact</span></a></li>
+                                    </ul>
+                                </ui:insert>
+                            </div>
+                            <div>
+                                <div id="left">
+                                    <ui:insert name="left">Left</ui:insert>
+                                </div>
+                                <div>
+                                    <div id="right">
+                                        <ui:insert name="right">Right</ui:insert>
+                                    </div>
+                                    <div id="content" class="right_content">
+                                        <ui:insert name="content">Content</ui:insert>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="bottom">
+                                <ui:insert name="bottom">Bottom</ui:insert>
+                            </div>
 
-    </h:body>
+                        </h:body>
 
-</html>
+                        </html>
