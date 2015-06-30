@@ -137,7 +137,6 @@ and open the template in the editor.
 }
 #horarios .horarios-puntarenas{
     position: relative;
-    height: 500px;
     display: table;
     margin: 60px auto;
     border-radius: 4px;
@@ -151,6 +150,7 @@ and open the template in the editor.
     border-left-width: 0px;
     border-spacing: 0px;
     background-color: rgb(255, 255, 255);
+    width: 100%;
 }
 
 .tabla thead{
