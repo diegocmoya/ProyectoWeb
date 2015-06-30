@@ -11,14 +11,14 @@
     position: relative;
     background-color: #c2dfef;
     padding: 5px;
-    margin: 10px 0px 0px 0px;
+    margin: 120px 0px 0px 0px;
 }
 
 #left {
     float: left;
     background-color: #ece3a5;
     padding: 5px;
-    width: 150px;
+    width: 280px;
 }
 
 #right {
@@ -32,12 +32,14 @@
     position: relative;
     background-color: #dddddd;
     padding: 5px;
+    
 }
 
 .left_content {
     background-color: #dddddd;
     padding: 5px;
-    margin-left: 170px;
+    margin-left: 300px;
+    width: 730px;
 }
 
 .right_content {

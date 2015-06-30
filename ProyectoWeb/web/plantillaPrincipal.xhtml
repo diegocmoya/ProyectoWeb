@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <h:outputStylesheet name="./css/style.css"/>
+        <title>Inicio</title>
+    </h:head>
+
+    <h:body>
+
+        <div id="top">
+            <ui:insert name="top">
+                <div id="logoPrincipal">
+
+                </div>
+                <div>
+                    <h:form>  
+                        <p:growl id="messages"/>
+
+                        <p:menubar>
+                            <p:submenu label="Inicio" icon="ui-icon-document">
+                                <p:menuitem value="Inicio de pagina" url="index.xhtml" />
+                            </p:submenu>
+                           
+                            <p:submenu label="Planes" icon="ui-icon-document">
+                                <p:menuitem value="Nuevos Planes" url="PagPlanes.xhtml" />
+                            </p:submenu>
+                            <p:submenu label="Contactenos" icon="ui-icon-document">
+                                <p:menuitem value="Informacion" url="#" />
+                            </p:submenu>
+                            <p:submenu label="Soporte" icon="ui-icon-document">
+                                <p:menuitem value="Informacion" url="#" />
+                            </p:submenu>
+                            <f:facet name="options">
+                                <p:commandButton ajax="false" value="Logout" action="#{administradorUsuario.logOut(e)}"/>
+                            </f:facet>
+                        </p:menubar>
+                    </h:form>
+                </div>
+            </ui:insert>
+        </div>
+
+        <div>
+            <div id="left">
+                <ui:insert name="left">
+                    <h:form>
+                        <h:panelGrid columns="2" cellpadding="2" styleClass="panel_izquierdo">
+                            <h:outputLabel  for="user" value="Usuario"/>
+                            <p:inputText id="user" value="#{usuario.nombreUsuario}"/>
+                            <h:outputLabel for="clave" value="clave"/>
+                            <p:inputText  id="clave" value="#{usuario.clave}"/>
+                            <p:commandButton ajax="false" value="Ingresar" action="#{administradorUsuario.login(e)}" />
+                            <p:commandLink ajax="false" value="Registrarse" action="RegistroUsuario"/>
+
+
+                        </h:panelGrid>
+                    </h:form>
+                    <div id="temaAndroid">
+                        
+                    </div>
+                </ui:insert>
+            </div>
+            <div id="content" class="left_content">
+                <ui:insert name="content">
+                    <div id="bannerPrincipal">
+                        
+                    </div>
+                    <div id="galeria">
+                        <p:galleria value="#{imagesView.images}" var="image" panelWidth="500" panelHeight="313" showCaption="true">
+                            <p:graphicImage value="resources/img/#{image}" alt="Image Description for #{image}" title="#{image}"/>
+                        </p:galleria>
+                    </div>
+                        
+                    
+                </ui:insert>
+            </div>
+        </div>
+        
+        <div id="bottom">
+            <ui:insert name="bottom">
+                <div>
+                    <p id="texto">Este es un proyecto del curso Programacion II de la Universidad de Costa Rica, Sede del Pacifico</p>
+                    <p id="texto">Realizado por Diego Castro Moya B41620</p>
+                </div>
+            </ui:insert>
+        </div>
+
+    </h:body>
+
+</html>
