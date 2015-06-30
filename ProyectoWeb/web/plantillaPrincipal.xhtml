@@ -8,82 +8,125 @@
 
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
         <h:outputStylesheet name="./css/default.css"/>
         <h:outputStylesheet name="./css/cssLayout.css"/>
         <h:outputStylesheet name="./css/style.css"/>
+        <h:outputStylesheet name="./css/menuBarStyle.css"/>
+        <link rel="stylesheet" href="resources/css/flexslider.css"/>
+        <script type="text/javascript" src='http://code.jquery.com/jquery-latest.min.js'></script>
+        <script type="text/javascript" src="resources/js/jquery.flexslider-min.js"/>
+
+
+
         <title>Inicio</title>
     </h:head>
 
     <h:body>
 
         <div id="top">
+
             <ui:insert name="top">
-                <div id="logoPrincipal">
+                <div id="logoPrincipal"/>
+                <h:form>
+                    <div id='cssmenu'>
+                        <ul>
+                            <li > <h:commandLink value="Inicio" action="index"/>  </li>
+                            <li> <a href="PagPlanes.xhtml">Comprar Boletos</a> </li>
+                            <li> <a href='#'>Horarios</a> </li>
+                            <li class='last'> <a href='#'><span>Soporte</span></a> </li>
+                        </ul>
+                    </div>
+                </h:form>
 
-                </div>
-                <div>
-                    <h:form>  
-                        <p:growl id="messages"/>
 
-                        <p:menubar>
-                            <p:submenu label="Inicio" icon="ui-icon-document">
-                                <p:menuitem value="Inicio de pagina" url="index.xhtml" />
-                            </p:submenu>
-                           
-                            <p:submenu label="Planes" icon="ui-icon-document">
-                                <p:menuitem value="Nuevos Planes" url="PagPlanes.xhtml" />
-                            </p:submenu>
-                            <p:submenu label="Contactenos" icon="ui-icon-document">
-                                <p:menuitem value="Informacion" url="#" />
-                            </p:submenu>
-                            <p:submenu label="Soporte" icon="ui-icon-document">
-                                <p:menuitem value="Informacion" url="#" />
-                            </p:submenu>
-                            <f:facet name="options">
-                                <p:commandButton ajax="false" value="Logout" action="#{administradorUsuario.logOut(e)}"/>
-                            </f:facet>
-                        </p:menubar>
-                    </h:form>
-                </div>
             </ui:insert>
         </div>
 
-        <div>
-            <div id="left">
-                <ui:insert name="left">
-                    <h:form>
-                        <h:panelGrid columns="2" cellpadding="2" styleClass="panel_izquierdo">
-                            <h:outputLabel  for="user" value="Usuario"/>
-                            <p:inputText id="user" value="#{usuario.nombreUsuario}"/>
-                            <h:outputLabel for="clave" value="clave"/>
-                            <p:inputText  id="clave" value="#{usuario.clave}"/>
-                            <p:commandButton ajax="false" value="Ingresar" action="#{administradorUsuario.login(e)}" />
-                            <p:commandLink ajax="false" value="Registrarse" action="RegistroUsuario"/>
+        <div id="content" class="center_content">
+            <ui:insert name="content">
 
-
-                        </h:panelGrid>
-                    </h:form>
-                    <div id="temaAndroid">
-                        
-                    </div>
-                </ui:insert>
-            </div>
-            <div id="content" class="left_content">
-                <ui:insert name="content">
-                    <div id="bannerPrincipal">
-                        
-                    </div>
-                    <div id="galeria">
-                        <p:galleria value="#{imagesView.images}" var="image" panelWidth="500" panelHeight="313" showCaption="true">
-                            <p:graphicImage value="resources/img/#{image}" alt="Image Description for #{image}" title="#{image}"/>
-                        </p:galleria>
-                    </div>
-                        
+                <div class="flexslider">
                     
-                </ui:insert>
-            </div>
+                    <ul class="slides">
+                        <div class="color-content-1"/>
+                        <li>
+                            <div style="background-image: url(resources/img/84472551.jpg);">
+                                <fieldset class="content-slide">
+                                    <div id="logoPrincipal-2"/>
+                                    <h5>Con el lema “ESFUERZO HECHO REALIDAD”, 
+                                        Naviera Tambor ha sido un baluarte en el desarrollo económico, 
+                                        social y especialmente turístico de esta zona llena de hermosos paisajes y 
+                                        exuberantes playas, que son el deleite de nacionales y extranjeros.
+                                    </h5>
+                                </fieldset>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="background-image: url(resources/img/20150417-Santa-Teresa-015.jpg);">
+                                <fieldset class="content-slide">
+                                    <h1>Compra con nuestro sistema de boletería online</h1>
+                                    <h4>ahorrate las filas y asegura tu campo. </h4>
+                                    <h:button class="btn" value="Comprar Boletos" />
+                                </fieldset>
+                            </div> 
+                        </li>
+                        <li>
+                            <div style="background-image: url(resources/img/2589_3.jpg);">
+                                <fieldset class="content-slide">
+                                    <h1>Consulta nuestros horarios y tarifas</h1>
+                                    <h4>Que no te deje el ferry </h4>
+                                    <div style="display: inline-block" >
+                                        <h:button class="btn" value="Horarios" />
+                                        <h:button class="btn" value="Tarifas" />
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </li>
+                      </ul>
+                </div>
+                      
+                <div id="horarios">
+                    <h1> Horarios de atención</h1>
+                    <fieldset class="horarios-puntarenas">
+                        <legend class="legend-horarios">Horarios puntarenas</legend>
+                        <table class="tabla">
+                            <thead >
+                                <tr>
+                                    <th>Hora</th>
+                                    <th>Barco</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>05:00 hrs.</td>
+                                    <td>TAMBOR III</td>
+                                </tr>
+                                <tr>
+                                    <td>09:00 hrs.</td>
+                                    <td>TAMBOR II</td>
+                                </tr>
+                                <tr>
+                                    <td>14:00 hrs.</td>
+                                    <td>TAMBOR II</td>
+                                </tr>
+                                <tr>
+                                    <td>17:00 hrs.</td>
+                                    <td>TAMBOR III</td>
+                                </tr>
+                                <tr>
+                                    <td>20:30 hrs.</td>
+                                    <td>TAMBOR II</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+
+                 
+            </ui:insert>
         </div>
-        
+
         <div id="bottom">
             <ui:insert name="bottom">
                 <div>
@@ -91,7 +134,23 @@
                     <p id="texto">Realizado por Diego Castro Moya B41620</p>
                 </div>
             </ui:insert>
+
+
+
         </div>
+
+        <script>
+
+            $(function () {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    slideshowSpeed: 4000,
+                    animationSpeed: 600,
+                    pauseOnHover: true
+                });
+            });
+
+        </script>
 
     </h:body>
 

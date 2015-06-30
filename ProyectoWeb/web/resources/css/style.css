@@ -8,9 +8,192 @@ and open the template in the editor.
     Author     : Diego castro
 */
 
-#logoPrincipal{background: url(../img/logo.png); display: block; width: 870px; height: 119px; margin: auto;}
-.panel_izquierdo{margin: auto;}
-#texto{ margin: auto; margin-left: 350px; margin-bottom: 1em;}
-#galeria{display: block; margin: auto; width: 870px; margin-left: 104px;}
-#bannerPrincipal{background: url(../img/banner-compra.jpg); display: block; width: 691px; height: 86px; margin-left: 20px; margin-bottom: 1em;}
-#temaAndroid{ background: url(../img/android-robot.png); margin-left: 85px; margin-top: -34px; top: 20px; left: -200px; width: 200px; height: 400px;}
+#logoPrincipal{
+    background-image: url(../img/logoTambor.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    width: 600px;
+    height: 100%;
+    float: left;
+}
+.panel_izquierdo{
+    margin: auto;
+}
+#texto{ 
+    margin: auto; 
+    margin-left: 350px; 
+    margin-bottom: 1em;
+}
+#galeria{
+    display: block; 
+    margin: auto; 
+    width: 870px; 
+    margin-left: 104px;
+}
+#bannerPrincipal{
+    background: url(../img/banner-compra.jpg); 
+    display: block; 
+    width: 691px; 
+    height: 86px; 
+    margin-left: 20px; 
+}
+
+
+
+.content-slide{
+    display: block;
+    position: relative;
+    color: white;
+    text-align: center;
+    border: none;
+    vertical-align: central;
+    padding: 100px;
+    transition: 0.3s ease-in-out;
+}
+
+.content-slide h1{
+    font-size: 30px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-slide h4{
+    font-size: 20px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-slide h5{
+    font-size: 15px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: match-parent;
+    line-height: 1.4;
+}
+
+.btn{
+    border-radius: 5px;
+    border: transparent;
+    background: #0D47A1;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px; 
+    transition: 0.3s ease-in-out;
+    margin: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.btn:hover,
+.btn:focus
+{
+    background: #0101ff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#logoPrincipal-2{
+    background-image: url(../img/logoTambor2.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    width: 800px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#horarios{
+    width: 100%;
+    background: #42A5F5;
+    display: block;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+#horarios h1{
+    color: white;
+    background: transparent;
+    margin-left: 40px;
+    margin: 0px;
+    padding: 40px;
+    font-size: 35px;
+}
+
+.legend-horarios{
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+
+   
+}
+#horarios .horarios-puntarenas{
+    position: relative;
+    height: 500px;
+    display: table;
+    margin: 60px auto;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.tabla{
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-spacing: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.tabla thead{
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    background: #0101ff;
+    color: white;
+}
+
+.tabla thead tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.tabla thead tr th{
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.tabla tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: white;
+    border-width: 2px;
+}
+
+.tabla tbody tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    padding: 10px;
+}
+
+.tabla tbody tr td{
+    display: table-cell;
+    vertical-align: inherit;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
